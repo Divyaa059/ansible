@@ -10,3 +10,18 @@
         - sanjaya
         - drcula
         - iraonman
+
+#####################copyingfilesssss#############3
+---
+- name: copy files
+  hosts: all
+  tasks:
+    - name: copy files
+      copy:
+        src: "{{ item }}"
+        dest: /tmp
+      loop:
+        - /etc/group
+        - /etc/fstab
+        - /etc/passwd
+        - /etc/shadow
